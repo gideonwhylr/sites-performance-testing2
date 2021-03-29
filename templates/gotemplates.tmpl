@@ -5,7 +5,12 @@
 <html>
     <body>
     <div>{{template "header"}}</div>
-        <h1> Welcome to Luc&#39;s Electronics - {{.name}}</h1>
+        <h1> Sites Performance Testing </h1>
+        
+        <h2> Data </h2> 
+
+        <p> Name:{{.name}} </p>
+        
         <p>Address: 
          {{ range $key, $value := .address }}
            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
@@ -15,6 +20,20 @@
                <li><strong>{{ $key }}</strong>: {{ $value }}</li>
           {{ end }}
         </p>
+        <p> Description:{{.description}} </p>
+
+
+
+        <p> Phone:{{.mainPhone}} </p>
+        <p> Alternate Phone:{{.alternatePhone}} </p>
+
+        <p> Geomodifier:{{.geomodifier}} </p>
+        <p> Custom Field 1:{{.c_customField1}} </p>
+        <p> Custom Field 2:{{.c_customField2}} </p>
+        <p> Custom Field 3:{{.c_customField3}} </p>
+        <p> Custom Field 4:{{.c_customField4}} </p>        
+        <p> Custom Field 5:{{.c_customField5}} </p>
+
     </body>
 </html>
 {{end}}
