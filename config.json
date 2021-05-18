@@ -10,21 +10,16 @@
 	"features": [
 		{
 			"name": "Location Page",
-			"streamLabel": "account-3460940/locations",
-			"goTemplateEntityPageSet": {
-				"template": "location.source",
-				"urlTemplate": "location.url"
+			"streamLabel": "pages-locations",
+			"handlebarsTemplateEntityPageSet": {
+				"template": "content",
+				"urlTemplate": "url"
 			}
-		},
-		{
-			"name": "ceo.html",
-			"staticPage": {
-			  "urlTemplate": "ceo.url",
-			  "template": "ceo.source"
-			}
-		  }
+		}
+		
 	],
 	"ci_config": {
+		"base_image_tag": "node-12.18",
 		"output_directories": ["templates", "desktop"],
 		"build_setup_cmd": "echo setup",
 		"build_cmd": "echo hello",
